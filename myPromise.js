@@ -185,7 +185,7 @@ class MyPromise {
     finally(cb) {
         return this.then{
             value => MyPromise.resolve(cb()).then(() => value),
-                reason => MyPromise.resolve(cb()).then(() => { throw reason })
+            reason => MyPromise.resolve(cb()).then(() => { throw reason })
         }
     }
 }
